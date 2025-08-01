@@ -1,0 +1,40 @@
+<header>
+    <div class="logo">
+        <img src="https://img.freepik.com/free-photo/digital-art-organic-floral-shapes-pattern_23-2151072818.jpg?semt=ais_hybrid&w=740&q=80" alt="logo.png">
+    </div>
+</header>
+<section>
+<!--Sign Up image Container-->
+    <div class="img-container" id="img-container">
+        <img src="https://static.vecteezy.com/system/resources/previews/003/689/228/non_2x/online-registration-or-sign-up-login-for-account-on-smartphone-app-user-interface-with-secure-password-mobile-application-for-ui-web-banner-access-cartoon-people-illustration-vector.jpg" alt="Signup.png"/>
+    </div>
+<!--Sign Up Form-->
+    <div class="signup-container" id="signup-container">
+        <form action="" [formGroup]="signUpForm" (ngSubmit)="onSubmit()">
+            <div>
+                <input type="text" placeholder="First Name" formControlName="fn">
+                <span class="error" [style.visibility]="signUpForm.get('fn')?.touched && signUpForm.get('fn')?.hasError('required') ? 'visible' : 'hidden'">
+                    First Name is Required
+                </span>
+            </div>
+            <div>
+                <input type="text" placeholder="Last Name" name="lastname" formControlName="ln">
+                <span class="error" [style.visibility]="signUpForm.get('ln')?.touched &&  signUpForm.get('ln')?.hasError('required')?'visible' : 'hidden'">Last Name is Required</span>
+            </div>
+            <div>
+                <input type="text" placeholder="Email" name="email" formControlName="email">
+                <span class="error" [style.visibility]="signUpForm.get('email')?.touched && signUpForm.get('email')?.hasError('required')?'visible' : 'hidden'">Email is Required</span>
+            </div>
+            <div>
+                <input type="password" placeholder="Password" name="password" formControlName="password">
+                <span class="error" [style.visibility]="signUpForm.get('password')?.touched && signUpForm.get('password')?.hasError('required')?'visible' : 'hidden'">Enter Password</span>
+            </div>
+            <div>
+                <input type="password" placeholder="Confrim Password" name="cp" formControlName="cp">
+                <span class="error" [style.visibility]="signUpForm.get('cp')?.touched && signUpForm.get('cp')?.hasError('required')?'visible' : 'hidden'">Enter Password</span>
+            </div>
+            <button type="submit" class="signup-btn">Sign up</button>
+            <p><a [routerLink]="['/signin']">Already Account! </a>Click Here</p>
+        </form>
+    </div>
+</section>

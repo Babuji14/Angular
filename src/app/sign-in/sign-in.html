@@ -1,0 +1,28 @@
+<header>
+    <div class="logo">
+        <img src="https://img.freepik.com/free-photo/digital-art-organic-floral-shapes-pattern_23-2151072818.jpg?semt=ais_hybrid&w=740&q=80" alt="logo.png">
+    </div>
+</header>
+<section>
+<!--Sign Up image Container-->
+    <div class="img-container" id="img-container">
+        <img src="https://media.istockphoto.com/id/1281150061/vector/register-account-submit-access-login-password-username-internet-online-website-concept.jpg?s=612x612&w=0&k=20&c=9HWSuA9IaU4o-CK6fALBS5eaO1ubnsM08EOYwgbwGBo=" alt="Signin.png">
+    </div>
+<!--Sign Up Form-->
+    <div class="signup-container" id="signup-container">
+        <form action="" [formGroup]="signInForm" (ngSubmit)="onSubmit()">
+            <div>
+                <input type="text" placeholder="User Name" formControlName="userName">
+                <span class="error" [style.visibility]="signInForm.get('userName')?.touched && signInForm.get('userName')?.hasError('required') ? 'visible' : 'hidden'">
+                    User Name is Required
+                </span>
+            </div>
+            <div>
+                <input type="text" placeholder="Password" name="password" formControlName="password">
+                <span class="error" [style.visibility]="signInForm.get('password')?.touched && signInForm.get('password')?.hasError('required')?'visible' : 'hidden'">Enter Password</span>
+            </div>
+            <button type="submit" class="signup-btn">Sign In</button>
+            
+        </form>
+    </div>
+</section>

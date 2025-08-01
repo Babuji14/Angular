@@ -1,0 +1,73 @@
+*{
+	padding:0px;
+	margin: 0px;
+	box-sizing: border-box;
+	font-family: sans-serif;
+	border: none;
+	outline: none;
+	scroll-behavior: smooth;
+	text-decoration: none;
+}
+:root{
+	--bg-color:#191f36;
+	--bf-color:#262840;
+	--text-color:#fff;
+	--main-color:#59B2f4;
+}
+section{
+    min-height: 100vh;
+    display: flex;
+    align-items:center;
+    justify-content: space-evenly;
+}
+#signup-container{
+    width: 380px;
+}
+form{
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding: 30px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+input{
+  width: 100%;
+  padding: 15px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+button{
+  background-color: #59a1f6;
+  margin: auto;
+  padding: 15px;
+  color: #fff;
+  font-size: 16px;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+button:hover{
+    background: transparent;
+    border: 1px solid #59a1f6;
+    color: #59a1f6;
+}
+span.error{
+  color: #ff0000;
+  font-size: 12px;
+  height: 16px;
+  display: block;
+  margin-top: 2px;
+  visibility: hidden;
+}
+input.ng-touched.ng-invalid + .error {
+  visibility: visible;
+}
+.logo img{
+  height: 80px;
+  width: 80px;
+  border-radius: 50%;
+}
+#img-container img{
+  width: 550px;
+  height: 500px;
+}

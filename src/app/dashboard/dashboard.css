@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Butcherman&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Butcherman&family=DynaPuff:wght@400..700&display=swap');
+*{
+	padding:0px;
+	margin: 0px;
+	box-sizing: border-box;
+	font-family: sans-serif;
+	border: none;
+	outline: none;
+	scroll-behavior: smooth;
+	text-decoration: none;
+    list-style: none;
+}
+section{
+    min-height: 80vh;
+    display: flex;
+    align-items:center ;
+    justify-content: center;
+}
+header{
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+nav ul{
+    display: flex;
+    align-items: center;
+}
+nav ul li{
+    margin:0 30px;
+}
+nav ul li a{
+    color: #000;
+     font-family: "DynaPuff", system-ui;
+}
+h1{
+    font-size: 80px;
+    font-family: "Butcherman", system-ui;
+    font-weight: 400;
+    font-style: normal;
+}
